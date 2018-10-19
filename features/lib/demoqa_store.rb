@@ -7,8 +7,12 @@ module DemoQAStore
         DemoQALogin.new
     end
 
+    def sign_up_service
+        DemoQASignUp.new
+    end
+
     def demoqa_homepage
-      DemoQAHomepage.new
+        DemoQAHomepage.new
     end
 
 end
