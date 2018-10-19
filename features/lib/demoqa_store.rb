@@ -1,11 +1,14 @@
+require_relative 'pages/login_service.rb'
 require_relative "pages/demoqa_homepage"
-# require_relative
-# require_relative
 
 module DemoQAStore
 
-  def demoqa_homepage
-    DemoQAHomepage.new
-  end
+    def login_service
+        DemoQALogin.new
+    end
+
+    def demoqa_homepage
+      DemoQAHomepage.new
+    end
 
 end
