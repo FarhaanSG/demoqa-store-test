@@ -1,3 +1,4 @@
+@mine
 Feature: Sign Up
 
     Scenario Outline: Inputting correct user details sends sign up email
