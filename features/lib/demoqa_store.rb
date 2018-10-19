@@ -1,4 +1,5 @@
 require_relative 'pages/login_service.rb'
+require_relative "pages/demoqa_homepage"
 
 module DemoQAStore
 
@@ -6,5 +7,8 @@ module DemoQAStore
         DemoQALogin.new
     end
 
+    def demoqa_homepage
+      DemoQAHomepage.new
+    end
 
 end
