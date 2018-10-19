@@ -1,10 +1,9 @@
-require_relative "pages/home_page.rb"
+require_relative "pages/nav_bar.rb"
 
 module DemoQAStore
 
-  def home_page
-    HomePage.new
+  def nav_bar
+    NavBar.new
   end
-
 
 end

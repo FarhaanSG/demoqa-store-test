@@ -9,6 +9,7 @@ Feature: Testing the navigation bar
     Given I am on the home page
     Then the links should only contain letters
 
+
   Scenario: all links should lead to a certain page or location
     Given I am on the home page
     When I hover over the Product Category link
