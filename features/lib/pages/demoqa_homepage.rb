@@ -15,8 +15,20 @@ class DemoQAHomepage
     find("#slide_menu").find("a", text: number, visible: false).click
   end
 
+  def get_slide_image
+    find("#slides").find("img", visible: true)
+  end
+
+  def click_slide_image
+    get_slide_image.click
+  end
+
+  def click_more_info
+    find("#slides").find("a[title=\"More Info\"]", visible: true).click
+  end
+
   def get_slide_image_href
-    find("#slides").find("img", visible: true)[:src]
+    get_slide_image[:src]
   end
 
   def click_buy_now

@@ -22,3 +22,11 @@ end
 Then("I should be on a specific product page") do
   expect(current_url).to match demoqa_homepage.single_product_regex
 end
+
+When("I click on the magicmouse image") do
+  demoqa_homepage.click_slide_image
+end
+
+When("I click on more info") do
+  demoqa_homepage.click_more_info
+end
