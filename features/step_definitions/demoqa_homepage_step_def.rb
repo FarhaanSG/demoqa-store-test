@@ -6,18 +6,19 @@ Then("I should see the homepage slides") do
   expect(demoqa_homepage).to have_css demoqa_homepage.slide_css
 end
 
-When("I click on the first slide menu option") do
-  pending # Write code here that turns the phrase above into concrete actions
+When(/I click on the slide menu option (\d)/) do |number|
+  demoqa_homepage.click_slide_option number
+  sleep 1
 end
 
-Then("I should see a slide with a magic mouse image") do
-  pending # Write code here that turns the phrase above into concrete actions
+Then(/I should see a slide with a (.*) image/) do |img_string|
+  expect(demoqa_homepage.get_slide_image_href).to include img_string
 end
 
 When("I click on the Buy Now button") do
-  pending # Write code here that turns the phrase above into concrete actions
+  demoqa_homepage.click_buy_now
 end
 
 Then("I should be on a specific product page") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(current_url).to match demoqa_homepage.single_product_regex
 end
