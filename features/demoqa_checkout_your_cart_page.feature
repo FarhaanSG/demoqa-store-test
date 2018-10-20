@@ -1,9 +1,11 @@
+
 Feature: Checkout Page Your Cart
 
   Scenario: Clicking on the add product button on a listed product
     Given I am able to access the website
     When I click add to cart on a product
     Then The product should be added to the basket page
+
 
   Scenario: Changing the quantity of an product in the basket
     Given I am on the checkout your cart page

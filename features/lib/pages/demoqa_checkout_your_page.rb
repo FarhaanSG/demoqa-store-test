@@ -16,6 +16,8 @@ class DemoQACheckoutYourCart
   FIRST_PRODUCT_IN_BASKET_DIV = ".product_row.product_row_0"
   BASKET_LINK = "#header_cart"
 
+  CHECKOUT_YOUR_CART_URL = "http://store.demoqa.com/products-page/checkout/"
+
   def visit_home_page
     visit(HOMEPAGE_URL)
   end
@@ -76,9 +78,29 @@ class DemoQACheckoutYourCart
 
 
   def fill_in_quantity(quantity)
-    find("#quantity").fill_in(with: quantity)
+    fill_in("quantity", with: quantity)
   end
 
-  
+  def click_update_quantity_button
+    find(FIRST_PRODUCT_IN_BASKET_DIV).find("[name=\"submit\"]").click
+  end
+
+
+  def visit_checkout_your_cart
+    visit(CHECKOUT_YOUR_CART_URL)
+  end
+
+  def check_if_product_deleted
+    if find(FIRST_PRODUCT_IN_BASKET_DIV)
+      return true
+    end
+    return false
+  end
+
+  def click_remove_product_button
+    find(FIRST_PRODUCT_IN_BASKET_DIV).find(".wpsc_product_remove.wpsc_product_remove_0").find("[name=\"submit\"]").click
+  end
+
+
 
 end
