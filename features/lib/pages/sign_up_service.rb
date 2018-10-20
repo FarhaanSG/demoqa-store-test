@@ -32,6 +32,10 @@ class DemoQASignUp
         find(EMAIL_FIELD_ID)
     end
 
+    def find_error_message
+        find(ERROR_MESSAGE_CLASS)
+    end
+
     #---------------------------------------------------------
     # Action
     #---------------------------------------------------------
@@ -57,6 +61,6 @@ class DemoQASignUp
     end
 
     def error_message_is_present?
-        find(ERROR_MESSAGE_CLASS).visible?
+        find_error_message.visible?
     end
 end
