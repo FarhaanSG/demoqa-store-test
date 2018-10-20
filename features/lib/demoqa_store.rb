@@ -1,6 +1,7 @@
-require_relative 'pages/login_service.rb'
+require_relative 'pages/demoqa_login_page.rb'
 require_relative "pages/demoqa_homepage"
 require_relative "pages/nav_bar.rb"
+require_relative 'pages/demoqa_sign_up_page.rb'
 
 module DemoQAStore
 
