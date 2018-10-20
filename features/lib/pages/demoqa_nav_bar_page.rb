@@ -1,6 +1,6 @@
 require "capybara"
 
-class NavBar
+class DemoQANavBar
   include Capybara::DSL
 
   def visit_home_page

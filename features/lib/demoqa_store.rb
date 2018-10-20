@@ -18,7 +18,7 @@ module DemoQAStore
     end
 
     def nav_bar
-        NavBar.new
+        DemoQANavBar.new
     end
 
 end
