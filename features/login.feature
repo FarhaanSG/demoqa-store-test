@@ -1,4 +1,3 @@
-@mine
 Feature: Login
 
     Scenario Outline: Inputting correct user details logs user in
