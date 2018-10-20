@@ -1,5 +1,3 @@
-require "capybara"
-
 class NavBar
 include Capybara::DSL
 

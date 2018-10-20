@@ -1,6 +1,7 @@
 require_relative 'pages/login_service.rb'
 require_relative "pages/demoqa_homepage"
 require_relative "pages/nav_bar.rb"
+require_relative "pages/search.rb"
 
 module DemoQAStore
 
@@ -18,6 +19,10 @@ module DemoQAStore
 
     def nav_bar
       NavBar.new
+    end
+
+    def search
+      Search.new
     end
 
 end
