@@ -6,10 +6,6 @@ class DemoQALogin
     PASSWORD_FIELD_ID = '#pwd'
     ERROR_MESSAGE_CLASS = '.response'
     LOGGED_IN_ID = '#wp-admin-bar-root-default'
-    
-    def visit_homepage
-        visit(HOMEPAGE_URL)
-    end
 
     #---------------------------------------------------------------
     # Find Elements
@@ -43,6 +39,10 @@ class DemoQALogin
     # Action
     #--------------------------------------------------------------
 
+    def visit_homepage
+        visit(HOMEPAGE_URL)
+    end
+    
     def visit_account(element_id)
         find_account_button(element_id).click
     end
