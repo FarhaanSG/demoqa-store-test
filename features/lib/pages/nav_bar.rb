@@ -1,9 +1,7 @@
 require "capybara"
 
 class NavBar
-include Capybara::DSL
-
-
+  include Capybara::DSL
 
   def visit_home_page
     visit('http://www.store.demoqa.com')
