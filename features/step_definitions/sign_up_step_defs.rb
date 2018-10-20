@@ -1,5 +1,5 @@
 Given("I access the register page") do
-  sign_up_service.visit_register
+  sign_up_service.click_register_button
 end
 
 Given("I input a valid new username") do
