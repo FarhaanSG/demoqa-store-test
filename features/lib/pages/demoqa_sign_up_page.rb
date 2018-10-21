@@ -41,7 +41,7 @@ class DemoQASignUp
     #---------------------------------------------------------
 
     def click_register_button
-        find_register_button.click
+        find(REGISTER_LINK_HREF).click
     end
 
     def visit_account(element_id)
