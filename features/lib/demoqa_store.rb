@@ -2,6 +2,7 @@ require_relative 'pages/demoqa_login_page.rb'
 require_relative "pages/demoqa_home_page"
 require_relative "pages/demoqa_nav_bar_page.rb"
 require_relative 'pages/demoqa_sign_up_page.rb'
+require_relative 'pages/demoqa_all_products_page.rb'
 
 module DemoQAStore
 
@@ -19,6 +20,10 @@ module DemoQAStore
 
     def nav_bar
         DemoQANavBar.new
+    end
+
+    def all_products_page
+        DemoQAAllProducts.new
     end
 
 end
