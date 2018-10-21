@@ -32,8 +32,8 @@ module DemoQAStore
     DemoQANavBar.new
   end
 
-    def all_products_page
-        DemoQAAllProducts.new
-    end
+  def all_products_page
+      DemoQAAllProducts.new
+  end
 
 end
