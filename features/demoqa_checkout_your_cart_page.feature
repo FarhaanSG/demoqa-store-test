@@ -6,7 +6,6 @@ Feature: Checkout Page Your Cart
     When I click add to cart on a product
     Then The product should be added to the basket page
 
-
   Scenario: Changing the quantity of an product in the basket
     Given I am on the checkout your cart page
     And I have a product added to the basket
@@ -26,3 +25,8 @@ Feature: Checkout Page Your Cart
     And I have a product added to the basket
     When I click on the remove button for a product
     Then The product should get removed from the checkout page
+
+  Scenario: Clicking on an empty basket
+    Given I am able to access the website
+    When I click on the basket page
+    Then I should be able see an error message

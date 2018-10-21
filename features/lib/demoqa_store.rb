@@ -1,6 +1,5 @@
 require_relative "pages/demoqa_checkout_your_page.rb"
-require_relative 'pages/login_service.rb'
-require_relative "pages/demoqa_homepage"
+require_relative "pages/demoqa_checkout_info_page.rb"
 require_relative 'pages/demoqa_login_page.rb'
 require_relative "pages/demoqa_home_page"
 require_relative "pages/demoqa_nav_bar_page.rb"
@@ -10,6 +9,10 @@ module DemoQAStore
 
   def demoqa_your_cart
     DemoQACheckoutYourCart.new
+  end
+
+  def demoqa_basket_info
+    DemoQACheckoutInfo.new
   end
 
   def login_service
