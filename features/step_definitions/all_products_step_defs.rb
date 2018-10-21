@@ -26,11 +26,24 @@ And(/^(.*) with (.*) id has a buy button/) do |product,id|
     expect(all_products_page.buy_button_is_visible?(id)).to eq(true)
 end
 
+And(/^(.*) with (.*) id has a facebook like button/) do |product,id|
+    expect(all_products_page.facebook_like_button_is_visible?(id)).to eq(true)
+end
+
 When(/^I click on the (.*) image$/) do |product|
     all_products_page.click_on_product_image(product)
     sleep(1)
 end
 
+When(/^I click on the (.*) with (.*) id buy button$/) do |product,id|
+    all_products_page.click_buy_button(id)
+end
+
 Then(/^(.*) popup appears$/) do |product|
     expect(all_products_page.popup_is_visible?).to eq(true)
+    puts all_products_page.find_value_of_items_in_basket['innerHTML']
+end
+
+Then("Basket count increases") do
+    expect(all_products_page.did_cart_increase?).to eq(true)
 end

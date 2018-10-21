@@ -8,6 +8,11 @@ class DemoQAAllProducts
     TITLE_ID = '.prodtitle'
     STAR_RATING_ID = '.star-rating-control'
     BUY_BUTTON_ID = '.input-button-buy'
+    FACEBOOK_LIKE_BUTTON_ID = '.fb-like.fb_iframe_widget'
+    BASKET_ID = '#header_cart'
+    BASKET_COUNT_ID = '.count'
+    @before = 0
+    @after = 0
 
     #---------------------------------------------------------------
     # Find Elements
@@ -47,6 +52,14 @@ class DemoQAAllProducts
 
     def find_buy_button(element)
         find(element).find(BUY_BUTTON_ID)
+    end
+
+    def find_facebook_like_button(element)
+        find(element).find(FACEBOOK_LIKE_BUTTON_ID)
+    end
+
+    def find_value_of_items_in_basket
+        find(BASKET_ID).find(BASKET_COUNT_ID)
     end
 
     #--------------------------------------------------------------
@@ -94,4 +107,19 @@ class DemoQAAllProducts
         find_buy_button(element).visible?
     end
 
+    def facebook_like_button_is_visible?(element)
+        find_facebook_like_button(element).visible?
+    end
+
+    def click_buy_button(element)
+        find_buy_button(element).click
+        sleep(5)
+    end
+
+    def did_cart_increase?
+        if find_value_of_items_in_basket['innerHTML'].to_i == 1
+            return true
+        end
+        return false
+    end
 end
