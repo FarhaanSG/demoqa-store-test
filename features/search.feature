@@ -1,4 +1,3 @@
-@test
 Feature: demoqa search
 
   Scenario: On typing the valid product detail it should show the searched item
