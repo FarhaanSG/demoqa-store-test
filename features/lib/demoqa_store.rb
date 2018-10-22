@@ -33,11 +33,7 @@ module DemoQAStore
   end
 
   def all_products_page
-<<<<<<< HEAD
     DemoQAAllProducts.new
-=======
-      DemoQAAllProducts.new
->>>>>>> dev
   end
 
 end

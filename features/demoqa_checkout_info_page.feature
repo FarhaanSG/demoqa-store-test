@@ -25,7 +25,6 @@ Feature: Checkout Page Info
     When I enter an invalid username with the correct password
     Then I should get an incorrect username error message
 
-  @mine
   Scenario: Entering an invalid password with a valid username
     Given I have a product added to my basket
     And I clicked continue to get to the checkout info page
