@@ -1,3 +1,4 @@
+@test
 Feature: Testing the navigation bar
 
   Scenario: when hovering over the Product Category link, the product options should appear

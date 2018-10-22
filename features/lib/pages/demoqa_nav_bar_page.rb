@@ -54,6 +54,7 @@ class DemoQANavBar
   end
 
   def click_macbooks_link
+    sleep 2
     find("#menu-item-39").click
   end
 
