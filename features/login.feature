@@ -24,7 +24,7 @@ Feature: Login
     Scenario: Inputting incorrect password details
         Given I access the home page
         And I access the account page via the foot link with the id of #menu-item-55
-        And I input a invalid username
-        And I input a valid password
+        And I input a valid username
+        And I input a invalid password
         When I click on the login button
         Then I get an error message

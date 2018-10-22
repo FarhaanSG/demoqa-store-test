@@ -70,3 +70,38 @@ end
 And("I should be able to view a summary of my purchase") do
   expect(demoqa_basket_info.find_summary_of_products).to eq(true)
 end
+
+#INPUTTING AN INVALID USERNAME WITH A PASSWORD
+When("I enter an invalid username with the correct password") do
+  demoqa_basket_info.input_username('WrongUser')
+  demoqa_basket_info.input_password('Farhaan1234')
+  demoqa_basket_info.click_login_button
+end
+
+Then("I should get an incorrect username error message") do
+  expect(demoqa_basket_info.invalid_username_error).to eq(true)
+  sleep 2
+end
+
+#INPUTTING AN INVALID PASSWORD WITH A CORRECT USERNAME
+When("I enter an invalid password with the correct username") do
+  demoqa_basket_info.input_username('Farhaan1234')
+  demoqa_basket_info.input_password('WrongPass')
+  demoqa_basket_info.click_login_button
+end
+
+Then("I should get an incorrect password error message") do
+  expect(demoqa_basket_info.invalid_password_error).to eq(true)
+  sleep 2
+end
+
+#INPUTTING AN INCORRECT EMAIL FORMAT
+When("I enter an invalid email") do
+  demoqa_basket_info.input_email("email.com")
+  demoqa_basket_info.click_purchase_button
+  demoqa_basket_info.click_continue_button
+end
+
+Then("Then i should get an invalid email error message") do
+  expect(demoqa_basket_info.check_invalid_email_error).to eq(true)
+end
