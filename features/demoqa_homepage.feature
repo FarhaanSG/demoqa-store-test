@@ -18,7 +18,7 @@ Feature: Homepage
   Scenario: Buying an item from the image slides
     Given I am on the homepage
     And I click on the slide menu option 1
-    When I click on the magicmouse image
+    When I click on the magicmouse image from the slides
     Then I should be on a specific product page
 
   Scenario: Clicking an item image from the image slides
