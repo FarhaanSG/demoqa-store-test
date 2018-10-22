@@ -1,5 +1,3 @@
-require "capybara"
-
 class DemoQANavBar
   include Capybara::DSL
 
