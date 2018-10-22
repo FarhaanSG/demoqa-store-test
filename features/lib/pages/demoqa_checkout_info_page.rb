@@ -2,6 +2,7 @@ class DemoQACheckoutInfo
   include Capybara::DSL
 
   HOMEPAGE_URL = "http://store.demoqa.com/"
+  CHECKOUT_INFO_PAGE_URL = ""
   CONTINUE_BUTTON_ID = ".step2"
   JAPAN_COUNTRY_OPTION = "option[value='JP']"
   STATE_FIELD_ID = "collected_data[15]"
@@ -21,6 +22,7 @@ class DemoQACheckoutInfo
   SAME_AS_BILLING_CHECKBOX_ID = "#shippingSameBilling"
   PURCHASE_BUTTON_CLASS = ".make_purchase.wpsc_buy_button"
   SUMMARY_OF_ORDERED_PRODUCTS = ".wpsc-purchase-log-transaction-results"
+  INVALID_USERNAME_PASSWORD_ERROR_MESSAGE = ".response"
 
   def visit_home_page
     visit(HOMEPAGE_URL)
@@ -123,6 +125,27 @@ class DemoQACheckoutInfo
 
   def find_summary_of_products
     find(SUMMARY_OF_ORDERED_PRODUCTS).visible?
+  end
+
+  def invalid_username_error
+    if find(INVALID_USERNAME_PASSWORD_ERROR_MESSAGE, text: "ERROR: Invalid username. ")
+      return true
+    end
+    return false
+  end
+
+  def invalid_password_error
+    if find(INVALID_USERNAME_PASSWORD_ERROR_MESSAGE, text: "ERROR: The password you entered for the username Farhaan1234 is incorrect. ")
+      return true
+    end
+    return false
+  end
+
+  def check_invalid_email_error
+    if find(".wpsc_email_address").find(".validation-error", text: "Please enter a valid email.")
+      return true
+    end
+    return false
   end
 
 end
