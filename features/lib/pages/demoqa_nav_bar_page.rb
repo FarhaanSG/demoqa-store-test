@@ -1,7 +1,5 @@
-class NavBar
-include Capybara::DSL
-
-
+class DemoQANavBar
+  include Capybara::DSL
 
   def visit_home_page
     visit('http://www.store.demoqa.com')
