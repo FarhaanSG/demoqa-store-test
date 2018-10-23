@@ -37,8 +37,12 @@ module DemoQAStore
       DemoQAAllProducts.new
   end
 
-    def search
+  def demoqa_footer_blogs
+      DemoQAFooter.new
+  end
+    
+  def search
       Search.new
-    end
+  end
 
 end
