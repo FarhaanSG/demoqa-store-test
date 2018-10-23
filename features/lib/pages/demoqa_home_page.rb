@@ -4,7 +4,7 @@ class DemoQAHomepage
   include Capybara::DSL
 
   def visit_homepage
-    visit("http://store.demoqa.com/")
+    visit("#main-nav > form > fieldset > input.search.blur")
   end
 
   def slide_css
