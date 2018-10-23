@@ -36,4 +36,8 @@ module DemoQAStore
       DemoQAAllProducts.new
   end
 
+  def demoqa_footer_blogs
+      DemoQAFooter.new
+  end
+
 end
